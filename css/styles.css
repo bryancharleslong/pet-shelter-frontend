@@ -1,0 +1,56 @@
+
+*{
+    font-family: Roboto, Arial, sans-serif;
+}
+body {
+    background-color: darkgray;
+    margin: 5vh auto;
+    max-width: 50vw;
+}
+button {
+    cursor: pointer;
+}
+#app, #header, #footer {
+    background-color: cornsilk;
+    margin: auto;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#header {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding-right: 1rem;
+}
+#footer  {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding-top: 4rem;
+    padding-bottom: .5rem;
+    text-align: center;
+}
+.nav_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav_header ul {
+    display: flex;
+    list-style: none;
+}
+.nav_header ul li {
+    padding: 1rem;
+    cursor: pointer;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    text-align: center;
+    min-height: 60vh;
+}
+#app ul {
+    padding: 0;
+    list-style: none;
+}
