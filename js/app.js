@@ -26,15 +26,25 @@ function footer() {
 }
 function navHome() {
     const homeButton = document.querySelector('.nav__home');
+    const cagesButton = document.querySelector('.nav__cages');
+    const petsButton = document.querySelector('.nav__pets');
     homeButton.addEventListener('click', function () {
+        petsButton.id = '';
+        cagesButton.id = '';
+        homeButton.id = 'selected';
         getAppContext().innerHTML = Home();
     })
     getAppContext().innerHTML = Home();
 }
 function navCages() {
+    const homeButton = document.querySelector('.nav__home');
     const cagesButton = document.querySelector('.nav__cages');
+    const petsButton = document.querySelector('.nav__pets');
     //get request
     cagesButton.addEventListener('click', function () {
+        petsButton.id = '';
+        cagesButton.id = 'selected';
+        homeButton.id = '';
         apiActions.getRequest(apiPath + '/cages', cages => {
             getAppContext().innerHTML = Cages(cages);
         })
@@ -55,8 +65,13 @@ function navCages() {
 
 }
 function navPets() {
+    const homeButton = document.querySelector('.nav__home');
+    const cagesButton = document.querySelector('.nav__cages');
     const petsButton = document.querySelector('.nav__pets');
     petsButton.addEventListener('click', function () {
+        petsButton.id = 'selected';
+        cagesButton.id = '';
+        homeButton.id = '';
         apiActions.getRequest(apiPath + '/cages', cages => {
             apiActions.getRequest(apiPath + '/pets', pets => {
                 getAppContext().innerHTML = Pets(pets, cages);

@@ -42,6 +42,9 @@ button {
     padding: 1rem;
     cursor: pointer;
 }
+#selected {
+    background-color: darkgrey;
+}
 #app {
     display: flex;
     flex-direction: column;
